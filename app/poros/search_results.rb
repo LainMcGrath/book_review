@@ -11,7 +11,11 @@ class SearchResults
 
   def book_results
     data = get_data
-    data.map do |book_info|
+    create_book(data)
+  end
+
+  def create_book(data)
+    data[:docs].map do |book_info|
       Book.new(book_info)
     end
   end

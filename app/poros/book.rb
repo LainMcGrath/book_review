@@ -1,6 +1,9 @@
 class Book
 
+  attr_reader :title, :author
+  
   def initialize(info)
-    require "pry"; binding.pry
+    @title = info[:title]
+    @author = info[:author_name]
   end
 end
